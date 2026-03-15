@@ -63,7 +63,7 @@ while True:
     try:
         number = int(input("Введіть тризначне число: "))
         
-        if 100 > number >= 1000:
+        if not (100 <= number < 1000):
             print("Будь ласка, введіть тризначне число.")
             continue
         
