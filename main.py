@@ -18,8 +18,8 @@ while True:
     
 
     try:
-        a = float(input("Введіть перше число: "))
-        b = float(input("Введіть друге число: "))
+        a = int(input("Введіть перше число: "))
+        b = int(input("Введіть друге число: "))
         
         print(f"Сума: {round(a + b, 2)}")
         print(f"Різниця: {round(a - b, 2)}")
