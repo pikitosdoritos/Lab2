@@ -25,7 +25,7 @@ while True:
         print(f"Різниця: {a - b}")
         print(f"Добуток: {a * b}")
         print(f"Ділення: {(a / b):.2f}")
-        print(f"Залишок від ділення: {(a % b):.2f}")
+        print(f"Залишок від ділення: {a % b}")
         
         if a <= 0:
             print("Логарифм і корінь визначені тільки для додатних чисел.")
@@ -112,6 +112,11 @@ print("Task 3")
 while True:
     try:
         celsius = float(input("Введіть температуру в градусах Цельсія: "))
+        
+        if celsius < -273.15:
+            print("Температура не може бути нижче абсолютного нуля (-273.15°C).\n")
+            continue
+        
         fahrenheit = (celsius * 9/5) + 32
         kelvin = celsius + 273.15
 
