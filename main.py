@@ -21,19 +21,19 @@ while True:
         a = int(input("Введіть перше число: "))
         b = int(input("Введіть друге число: "))
         
-        print(f"Сума: {round(a + b, 2)}")
-        print(f"Різниця: {round(a - b, 2)}")
-        print(f"Добуток: {round(a * b, 2)}")
-        print(f"Ділення: {round(a / b, 2)}")
-        print(f"Залишок від ділення: {round(a % b, 2)}")
+        print(f"Сума: {a + b}")
+        print(f"Різниця: {a - b}")
+        print(f"Добуток: {a * b}")
+        print(f"Ділення: {(a / b):.2f}")
+        print(f"Залишок від ділення: {(a % b):.2f}")
         
         if a <= 0:
             print("Логарифм і корінь визначені тільки для додатних чисел.")
         else:
-            print(f"Десятковий логарифм числа a: {round(math.log10(a), 2)}")
-            print(f"Квадратний корінь з числа a: {round(math.sqrt(a), 2)}")
+            print(f"Десятковий логарифм числа a: {(math.log10(a)):.2f}")
+            print(f"Квадратний корінь з числа a: {(math.sqrt(a)):.2f}")
             
-        print(f"Результат піднесення числа a в ступінь b: {round(a ** b, 2)}")
+        print(f"Результат піднесення числа a в ступінь b: {(a ** b):.2f}")
 
         a, b = b, a
 
@@ -84,15 +84,14 @@ while True:
 
         print(f"Sum of digits: {sum(map(int, str(number)))}")
         
-        hundreds = number // 100
         tens = (number // 10) % 10
         ones = number % 10
         
-        product_digits = hundreds * tens * ones
+        product_digits = first * tens * ones
 
         print(f"Product of digits: {product_digits}")
 
-        swapped = tens * 100 + hundreds * 10 + ones
+        swapped = tens * 100 + first * 10 + ones
 
         print(f"Swapped hundreds and tens: {swapped}")
         
@@ -100,3 +99,26 @@ while True:
     
     except ValueError:
         print("Будь ласка, введіть коректне число.")
+        
+# 3
+# Напишіть програму, яка запитуватиме у користувача значення
+# температури в градусах Цельсія та відображатиме еквівалентний показник за
+# шкалами Фаренгейта та Кельвіна. Необхідні коефіцієнти та формули для
+# проведення розрахунків знайти в інтернеті.
+
+print("==" * 80)
+print("Task 3")
+
+while True:
+    try:
+        celsius = float(input("Введіть температуру в градусах Цельсія: "))
+        fahrenheit = (celsius * 9/5) + 32
+        kelvin = celsius + 273.15
+
+        print(f"Температура в Фаренгейтах: {fahrenheit:.2f}")
+        print(f"Температура в Кельвінах: {kelvin:.2f}")
+        break
+    
+    except ValueError:
+        print("Будь ласка, введіть коректне число.")
+        
